@@ -10,5 +10,9 @@ function runsql() {
     echo "Done."
 }
 
-runsql university.sql
-
+cd Student
+echo *.sql
+for file in *.sql
+do
+    runsql "$file"
+done
